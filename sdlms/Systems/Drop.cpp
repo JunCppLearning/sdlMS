@@ -47,16 +47,15 @@ void drop_run()
             }
             else
             {
-                // 上下浮动
-                if (tr->position.y <= mv->ry0)
-                {
-                    mv->vspeed = 3;
-                }
-                else if (tr->position.y >= mv->ry1)
-                {
-                    mv->vspeed = -3;
-                }
                 tr->position.y += mv->vspeed * Window::delta_time / 1000;
+                if (mv->ry0.has_value() && mv->ry1.has_value())
+                {
+                    if (tr->position.y < mv->ry0.value() || tr->position.y > mv->ry1.value())
+                    {
+                        mv->vspeed = -mv->vspeed;
+                        tr->position.y = std::clamp(tr->position.y, (float)mv->ry0.value(), (float)mv->ry1.value());
+                    }
+                }
             }
         }
         else
