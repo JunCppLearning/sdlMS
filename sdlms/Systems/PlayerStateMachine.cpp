@@ -185,11 +185,11 @@ int player_walk(Move *mv, Transform *tr, float delta_time)
 
     if (Input::state[SDL_SCANCODE_RIGHT])
     {
-        mv->hforce = 1400;
+        mv->hforce = 14000;
     }
     else if (Input::state[SDL_SCANCODE_LEFT])
     {
-        mv->hforce = -1400;
+        mv->hforce = -14000;
     }
     else
     {

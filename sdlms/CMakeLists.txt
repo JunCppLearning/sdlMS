@@ -6,11 +6,11 @@ include_directories("${CMAKE_SOURCE_DIR}/3rdparty/wzlibcpp/include")
 include_directories("${CMAKE_SOURCE_DIR}/3rdparty/wzlibcpp/mio/include")
 
 # ffmpeg
-include_directories("C:/ffmpeg-master-latest-win64-gpl-shared/include")
-link_directories("C:/ffmpeg-master-latest-win64-gpl-shared/lib")
+include_directories("D:/mapstory/file/FFMPEG/ffmpeg-master-latest-win64-gpl-shared/include")
+link_directories("D:/mapstory/file/FFMPEG/ffmpeg-master-latest-win64-gpl-shared/lib")
 
-include_directories("C:/FFMPEG-WEB/include")
-link_directories("C:/FFMPEG-WEB/lib")
+include_directories("D:/mapstory/file/FFMPEG/FFMPEG-WEB/include")
+link_directories("D:/mapstory/file/FFMPEG/FFMPEG-WEB/lib")
 
 file(GLOB SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/**/*.cpp)
 add_executable(sdlMS ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp ${SOURCE_FILES})

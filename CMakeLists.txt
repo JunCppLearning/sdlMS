@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.28)
 project(sdlMS)
-
+SET(CMAKE_BUILD_TYPE "Debug")
 set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g2 -ggdb") # -g: 生成调试信息, -O0: 禁用优化
+set(CMAKE_C_FLAGS_DEBUG "-g -O0")
 
 # Add compile information for LSP
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
